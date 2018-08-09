@@ -1,7 +1,7 @@
 ---
 title: "Layouts"
 date: 2018-08-07T12:37:13+02:00
-draft: true
+draft: false
 categories:
 - Design Guidelines
 categories_weight: 3
