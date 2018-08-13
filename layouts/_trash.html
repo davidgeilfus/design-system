@@ -1,0 +1,27 @@
+{{ define "main" }}
+
+  <div class="o-page">
+    <div class="o-page__sidenav">
+      {{ partial "sidenav.html" . }}
+    </div>
+    <div class="o-page__content">
+      <main class="c-content" role="main">
+        {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+          <section class="c-content__section">
+            <div class="c-hero">
+              <h1 class="c-hero__title">{{ replace ($name | humanize | title) "Ui" "UI" }}</h1>
+            </div>
+            
+            {{ range $taxonomy.Pages }}
+              <article>
+                <h2 id="{{ .LinkTitle | urlize }}">{{ .Title }}</h2>
+              </article>
+              {{ .Content }}
+            {{ end }}
+          </section>
+        {{ end }}
+      </main>
+    </div>
+  </div>
+  
+{{ end }}

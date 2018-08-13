@@ -1,0 +1,10 @@
+{{ $colors := $.Page.Params.colors }}
+
+<div class="c-color-swatches">
+  {{ range $color := $colors }}
+    <div class="c-color-swatches__swatch">
+      <strong>Hex</strong>: {{ $color.hex }}<br>
+      <strong>RGB</strong>: {{ $color.rgb }} 
+    </div>
+  {{ end }}
+</div>

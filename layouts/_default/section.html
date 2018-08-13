@@ -1,0 +1,23 @@
+{{ define "main" }}
+
+  <div class="o-page">
+    <div class="o-page__nav">
+      {{ partial "nav.html" . }}
+    </div>
+    
+    <div class="o-page__main">
+      <main class="c-main" role="main">
+        <div class="c-hero">
+          <div class="o-media">
+            <div class="o-media__body">
+              <h1 class="c-hero__title">{{.Title}}</h1>
+              {{ .Content }}
+            </div>
+            <div class="o-media__image"></div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  
+{{ end }}

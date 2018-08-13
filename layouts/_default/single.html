@@ -1,0 +1,21 @@
+{{ define "main" }}
+
+  <div class="o-page">
+    <div class="o-page__nav">
+      {{ partial "nav.html" . }}
+    </div>
+
+    <div class="o-page__main">
+      <main class="c-main" role="main">
+        <header class="c-page-header">
+          <h1 class="c-page-header__title">{{.Title}}</h1>
+        </header>
+
+        <div class="l-container">
+          {{ .Content }}
+        </div>
+      </main>
+    </div>
+  </div>
+  
+{{ end }}
